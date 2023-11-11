@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Tourney&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tourney', sans-serif;
+  background-color: #adb5bd;
+  overflow: hidden;
+}
+
+.game-container {
+  background-image: url('assets/game-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.game-title {
+  position: relative;
+  top: 48px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.game-title p {
+  margin-top: 12px;
+  font-size: 0.5em;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.game-score {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.dino {
+  background-image: url('assets/dino.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 48px;
+  bottom: 160px;
+}
+
+.obstacle {
+  background-image: url('assets/obstacle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 60px;
+  bottom: 160px;
+}
+
+.dino-animation {
+  animation: dino-ani 0.7s linear;
+}
+.obstacle-animation {
+  animation: obstacle-ani 2s linear infinite;
+}
+
+@keyframes dino-ani {
+  0% {
+    bottom: 160px;
+  }
+  50% {
+    bottom: 400px;
+  }
+  100% {
+    bottom: 160px;
+  }
+}
+
+@keyframes obstacle-ani {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
